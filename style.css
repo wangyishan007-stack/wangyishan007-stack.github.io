@@ -1,3 +1,300 @@
 
-/* KIBU.BOT UI THEME */
-body { background:#0d0f13; color:#fff; }
+/* =========================================================
+   KIBU BOT – REFINED UI (HTML‑COMPATIBLE)
+   Scope: Visual polish only (no layout breakage)
+   ========================================================= */
+
+/* ---------- Tokens ---------- */
+:root {
+  --bg-main: radial-gradient(1200px 600px at 50% -200px, #1b1e24 0%, #0e1014 60%);
+  --bg-panel: #15181d;
+  --bg-card: #1a1e24;
+
+  --border-soft: rgba(255,255,255,0.06);
+
+  --text-main: #f4f6fa;
+  --text-sub: #9aa3b2;
+  --text-muted: #6b7280;
+
+  --accent-orange: #ff7a55;
+  --accent-blue: #4da3ff;
+  --accent-green: #3fb68b;
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 10px;
+
+  --shadow-card: 0 18px 50px rgba(0,0,0,0.45);
+}
+
+/* ---------- Reset ---------- */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-orange), #ff9a7a);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav-left { display:flex; align-items:center; gap:10px; }
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.beta-badge {
+  background: rgba(255,122,85,0.14);
+  color: var(--accent-orange);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.nav-right {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ---------- Stats ---------- */
+.stats-bar {
+  display: flex;
+  gap: 16px;
+  padding: 26px 40px;
+  border-bottom: 1px solid var(--border-soft);
+  overflow-x: auto;
+}
+
+.stat-item {
+  min-width: 150px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.stat-toggle {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--bg-panel);
+  color: var(--text-main);
+}
+
+/* ---------- Main ---------- */
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 96px 24px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.hero-icon {
+  font-size: 72px;
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-title .highlight {
+  color: var(--accent-orange);
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: var(--text-sub);
+  margin-bottom: 20px;
+}
+
+.hero-platforms {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+
+.platform-link {
+  color: var(--accent-orange);
+  text-decoration: none;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+}
+
+.btn-coral { background: var(--accent-orange); color:#fff; }
+.btn-blue { background: var(--accent-blue); color:#fff; }
+.btn-green { background: var(--accent-green); color:#fff; }
+
+.btn-full {
+  width: 100%;
+  background: var(--accent-orange);
+  color: #fff;
+  margin-top: 16px;
+}
+
+/* ---------- Cards ---------- */
+.platform-token,
+.token-launch-info {
+  margin-bottom: 56px;
+}
+
+.token-card,
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.token-title {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: var(--accent-orange);
+}
+
+/* ---------- Token Address ---------- */
+.token-address {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.token-address input {
+  flex: 1;
+  background: #0f1115;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  color: var(--text-sub);
+}
+
+.copy-btn {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0 14px;
+  cursor: pointer;
+  color: var(--text-sub);
+}
+
+/* ---------- Info ---------- */
+.info-title {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.info-list li {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+}
+
+.info-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+/* ---------- View All ---------- */
+.view-all {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar,
+  .stats-bar {
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main { padding: 72px 20px; }
+
+  .hero-title { font-size: 28px; }
+
+  .hero-buttons { flex-direction: column; }
+}
