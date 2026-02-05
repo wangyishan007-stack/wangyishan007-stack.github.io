@@ -1,71 +1,60 @@
-// 简单的交互功能演示
-
-// 连接钱包按钮
-document.querySelector('.connect-wallet').addEventListener('click', function() {
-    alert('演示版本：实际应用中这里会连接 MetaMask 等 Web3 钱包');
+// 复制地址功能
+document.querySelector('.copy-btn').addEventListener('click', function() {
+    const addressInput = document.querySelector('.token-address input');
+    addressInput.select();
+    document.execCommand('copy');
+    
+    // 临时更改按钮文字
+    const originalText = this.textContent;
+    this.textContent = '✓';
+    setTimeout(() => {
+        this.textContent = originalText;
+    }, 2000);
 });
 
-// 启动代币按钮
-document.querySelectorAll('.btn-primary').forEach(btn => {
+// 统计数据切换
+document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.addEventListener('click', function() {
-        if (this.textContent.includes('启动') || this.textContent.includes('开始')) {
-            alert('演示版本：实际应用中这里会打开代币发行表单');
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // 这里可以添加实际的数据切换逻辑
+        console.log('切换到:', this.textContent);
+    });
+});
+
+// View All Tokens 按钮
+document.querySelector('.view-all-btn').addEventListener('click', function() {
+    alert('演示版本：实际应用中这里会展开显示所有代币列表');
+});
+
+// 按钮点击提示
+document.querySelectorAll('.btn').forEach(btn => {
+    if (!btn.classList.contains('copy-btn') && !btn.classList.contains('toggle-btn') && !btn.classList.contains('view-all-btn')) {
+        btn.addEventListener('click', function() {
+            const btnText = this.textContent.trim();
+            alert(`演示版本：点击了 "${btnText}" 按钮`);
+        });
+    }
+});
+
+// 数字动画效果（可选）
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value.toLocaleString();
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
         }
-    });
+    };
+    window.requestAnimationFrame(step);
+}
+
+// 页面加载动画
+window.addEventListener('load', function() {
+    console.log('claunch 演示版本已加载');
+    console.log('这是一个纯前端演示，不包含实际的区块链功能');
 });
-
-// 浏览代币按钮
-document.querySelectorAll('.btn-secondary').forEach(btn => {
-    btn.addEventListener('click', function() {
-        if (this.textContent.includes('浏览')) {
-            alert('演示版本：实际应用中这里会跳转到代币列表页面');
-        }
-    });
-});
-
-// 查看详情按钮
-document.querySelectorAll('.token-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        alert('演示版本：实际应用中这里会显示代币的详细信息和交易界面');
-    });
-});
-
-// 平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// 添加滚动动画效果
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// 为卡片添加动画
-document.querySelectorAll('.token-card, .feature-card, .step').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
-
-console.log('AgentLaunch 演示版本已加载');
-console.log('注意：这是一个纯前端演示,不包含任何真实的区块链功能');

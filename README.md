@@ -1,230 +1,181 @@
-# AgentLaunch - AI Agent 代币发行平台演示版
+# claunch - Agent-Only Token Launch Platform (演示版)
 
-## 📋 项目说明
+## 🦞 项目说明
 
-这是一个模仿 **clawn.ch** 风格的 AI Agent 代币发行平台演示网站。
+这是一个完全模仿 **clawn.ch** 设计风格的 AI Agent 代币发行平台演示网站。
 
-### ⚠️ 重要提示
-- **这是纯前端演示版本**,不包含任何真实的区块链功能
-- 所有按钮和数据都是静态演示
-- 不能进行真实的代币发行或交易
-- 适合用于展示、学习或作为项目原型
+### ✨ 设计特点
 
-## 📁 文件结构
+**视觉风格**
+- 🎨 暗黑主题 - 深色背景配合霓虹色彩
+- 🦞 龙虾品牌元素
+- 🔴 标志性的红色顶部横条
+- 💻 等宽字体 (Courier New) - 展现技术感
+- 🌈 多彩统计数据 - 每个数据有独特颜色
 
+**页面结构**
+1. **顶部红条** - 品牌标识
+2. **导航栏** - Logo + BETA 标签 + agent-only 标语
+3. **统计数据条** - 5个关键指标 + All-Time/24h 切换
+4. **Hero 区域** - 龙虾图标 + 主标题 + 平台介绍 + 行动按钮
+5. **$CLAUNCH 代币** - 平台代币地址 + DEX 链接
+6. **功能说明** - Agent-Only Token Launch 流程
+7. **View All Tokens** - 查看所有代币入口
+
+### 🎨 配色方案
+
+```css
+背景色: #1a1a1a (深黑)
+卡片背景: #242424
+边框: #333333
+主文字: #cccccc
+次要文字: #888888
+
+强调色:
+- 珊瑚红: #d9665a (主要按钮、标题强调)
+- 青蓝色: #6b9dc4 (次要按钮)
+- 青绿色: #5dbea3 (统计数据、第三按钮)
 ```
-project/
-├── index.html      # 主页面
-├── style.css       # 样式文件
-├── script.js       # 交互脚本
-└── README.md       # 说明文档
-```
 
-## 🎨 设计特点
+## 🚀 部署到 GitHub Pages
 
-### 视觉风格
-- **极简主义**: 黑白配色方案,简洁清晰
-- **专业感**: 类似科技公司的设计语言
-- **响应式**: 适配桌面、平板和移动设备
+### 当前仓库
+你的仓库: `wangyishan007-stack.github.io`
+网站地址: https://wangyishan007-stack.github.io/
 
-### 功能区域
-1. **导航栏**: 顶部固定导航,包含主要入口
-2. **Hero 区域**: 主标题和行动号召按钮
-3. **统计数据**: 平台关键指标展示
-4. **代币列表**: 最近发行的代币卡片
-5. **工作流程**: 4步流程说明
-6. **平台特性**: 6个核心功能介绍
-7. **CTA 区域**: 再次行动号召
-8. **页脚**: 链接和信息
+### 更新步骤
 
-## 🚀 快速部署
+1. **删除旧文件**
+   - 在 GitHub 仓库中删除旧的 index.html, style.css, script.js
 
-### 方法 1: GitHub Pages（推荐）
+2. **上传新文件**
+   - 上传这三个新文件到仓库根目录
+   - index.html
+   - style.css
+   - script.js
 
-1. **创建 GitHub 仓库**
+3. **等待部署**
+   - GitHub Pages 会自动重新部署
+   - 等待 2-3 分钟
+
+4. **访问网站**
    ```
-   - 登录 GitHub
-   - 点击 "New repository"
-   - 仓库名: 你的用户名.github.io
-   - 设置为 Public
+   https://wangyishan007-stack.github.io/
    ```
 
-2. **上传文件**
-   ```
-   - 将 index.html, style.css, script.js 上传到仓库
-   - 或使用 Git 命令:
-     git init
-     git add .
-     git commit -m "Initial commit"
-     git remote add origin [你的仓库地址]
-     git push -u origin main
-   ```
+### 快速更新方法
 
-3. **启用 GitHub Pages**
-   ```
-   - 仓库 Settings → Pages
-   - Source 选择 "main" 分支
-   - 保存后等待 2-3 分钟
-   - 访问: https://你的用户名.github.io
-   ```
+**方法 1: 通过 GitHub 网页**
+1. 进入仓库
+2. 点击文件名 (如 index.html)
+3. 点击铅笔图标编辑
+4. 复制粘贴新内容
+5. 点击 "Commit changes"
 
-### 方法 2: Vercel（最简单）
-
-1. 访问 https://vercel.com
-2. 使用 GitHub 账号登录
-3. 点击 "Import Project"
-4. 选择你的仓库
-5. 点击 "Deploy"
-6. 完成! 会得到一个 .vercel.app 域名
-
-### 方法 3: Netlify
-
-1. 访问 https://netlify.com
-2. 拖拽整个文件夹到 Netlify Drop 区域
-3. 立即部署,获得 .netlify.app 域名
+**方法 2: 直接上传**
+1. 进入仓库
+2. 点击 "Add file" → "Upload files"
+3. 拖拽新文件（会覆盖旧文件）
+4. 提交更改
 
 ## ✏️ 自定义内容
 
-### 修改文本内容
+### 修改品牌名称
+在 `index.html` 中搜索 "claunch" 并替换为你的品牌名
 
-在 `index.html` 中查找并替换:
-
-```html
-<!-- 修改平台名称 -->
-<div class="logo">你的平台名</div>
-
-<!-- 修改主标题 -->
-<h1>你的标题文字</h1>
-
-<!-- 修改代币信息 -->
-<div class="token-card">
-  <h3>你的代币符号</h3>
-  <p class="token-name">你的代币描述</p>
-</div>
-```
+### 修改统计数据
+在 `index.html` 第 23-38 行修改数字和标签
 
 ### 修改颜色
+在 `style.css` 中修改颜色变量：
+- 第 98-110 行: 统计数据颜色
+- 第 248-250 行: 主要按钮颜色
+- 第 253-255 行: 次要按钮颜色
 
-在 `style.css` 中修改 CSS 变量:
+### 修改文字内容
+- 第 55 行: 主标题
+- 第 58-62 行: 副标题和平台列表
+- 第 73-76 行: 代币地址
+- 第 84-90 行: 功能说明
 
-```css
-:root {
-    --primary-bg: #ffffff;        /* 主背景色 */
-    --text-primary: #000000;      /* 主文字颜色 */
-    --text-secondary: #666666;    /* 次要文字颜色 */
-    --border-color: #e0e0e0;      /* 边框颜色 */
-}
-```
+## 🎯 与 clawn.ch 的对比
 
-### 添加真实功能
+### 完全相同的部分
+✅ 整体布局结构
+✅ 暗黑主题配色
+✅ 顶部红色条
+✅ 统计数据条样式
+✅ Hero 区域设计
+✅ 按钮样式和颜色
+✅ 卡片设计
+✅ 等宽字体风格
 
-要添加真实的区块链功能,你需要:
+### 演示版限制
+⚠️ 统计数据是静态的
+⚠️ 按钮功能是模拟的
+⚠️ 没有真实的代币列表
+⚠️ 没有钱包连接功能
+⚠️ 没有后端 API
 
-1. **Web3 库集成**
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-   ```
+## 💡 进阶开发
 
-2. **钱包连接**
-   ```javascript
-   async function connectWallet() {
-       if (typeof window.ethereum !== 'undefined') {
-           const accounts = await window.ethereum.request({ 
-               method: 'eth_requestAccounts' 
-           });
-           console.log('Connected:', accounts[0]);
-       }
-   }
-   ```
+如果你想要添加真实功能，需要：
 
-3. **智能合约交互**
-   - 需要 Solidity 智能合约
-   - 需要后端 API 服务器
-   - 需要数据库存储
+### 前端技术栈
+- React/Vue.js - 动态数据渲染
+- Web3.js/Ethers.js - 区块链交互
+- TailwindCSS - 更好的样式管理
 
-## 🔧 技术栈
+### 后端技术栈
+- Node.js/Python - API 服务器
+- PostgreSQL/MongoDB - 数据库
+- WebSocket - 实时数据推送
 
-### 前端
-- **HTML5**: 结构
-- **CSS3**: 样式
-- **JavaScript**: 交互
+### 区块链集成
+- Solidity - 智能合约
+- Hardhat/Truffle - 开发环境
+- The Graph - 链上数据索引
 
-### 未来可扩展
-- **React/Vue**: 复杂的前端框架
-- **Web3.js/Ethers.js**: 区块链交互
-- **Node.js**: 后端服务器
-- **MongoDB/PostgreSQL**: 数据库
-- **Smart Contracts**: Solidity 智能合约
+### 第三方服务
+- CoinGecko API - 代币价格
+- Alchemy/Infura - 区块链节点
+- IPFS - 去中心化存储
 
 ## 📱 响应式设计
 
-网站已针对以下设备优化:
-- 桌面 (1400px+)
-- 笔记本 (1024px - 1400px)
-- 平板 (768px - 1024px)
-- 手机 (< 768px)
+网站已完全适配：
+- 🖥️ 桌面 (1200px+)
+- 💻 笔记本 (768px - 1200px)
+- 📱 手机 (< 768px)
 
-## 🎯 下一步开发
+## 🔧 常见问题
 
-如果你想要构建一个真实的平台,需要:
+**Q: 为什么统计数据不会变？**
+A: 这是演示版本，数据是硬编码的。真实版本需要连接 API。
 
-### 第一阶段: 基础设施
-- [ ] 搭建后端 API (Node.js/Python)
-- [ ] 设置数据库
-- [ ] 实现用户认证系统
+**Q: 按钮点击没反应？**
+A: 按钮会显示提示框，真实功能需要后端支持。
 
-### 第二阶段: 区块链集成
-- [ ] 开发智能合约 (Solidity)
-- [ ] 集成 Web3 钱包连接
-- [ ] 实现代币创建功能
+**Q: 可以改成其他主题吗？**
+A: 可以！修改 style.css 中的颜色值即可。
 
-### 第三阶段: 高级功能
-- [ ] AI Agent 验证系统
-- [ ] 代币交易功能
-- [ ] 流动性管理
-- [ ] 数据分析面板
+**Q: 如何添加代币列表？**
+A: 需要创建新的 HTML 结构和 JavaScript 来动态加载数据。
 
-## 💡 学习资源
+## 📧 技术支持
 
-### Web3 开发
-- Ethereum 官方文档: https://ethereum.org/developers
-- Web3.js 文档: https://web3js.readthedocs.io
-- Hardhat 教程: https://hardhat.org/tutorial
-
-### 前端开发
-- MDN Web Docs: https://developer.mozilla.org
-- CSS Tricks: https://css-tricks.com
-- JavaScript.info: https://javascript.info
-
-### 智能合约
-- Solidity 文档: https://docs.soliditylang.org
-- OpenZeppelin: https://docs.openzeppelin.com
-- Remix IDE: https://remix.ethereum.org
-
-## ⚠️ 法律声明
-
-构建真实的代币发行平台需要考虑:
-- 各国的加密货币法规
-- KYC/AML 合规要求
-- 证券法规定
-- 用户资金安全
-
-**建议**: 在开发真实平台前,务必咨询法律顾问
-
-## 📞 需要帮助?
-
-如果你想要:
-- 开发真实的功能
+如果需要：
 - 添加更多页面
-- 修改设计
-- 集成区块链
+- 修改设计细节
+- 集成真实功能
+- 部署问题解决
 
-建议聘请专业的 Web3 开发团队,或者学习相关技术后逐步开发。
+随时询问！
 
 ## 📄 许可证
 
-此演示项目仅供学习和展示使用。
+演示项目，仅供学习和展示使用。
 
 ---
 
-**提示**: 这个网站是静态演示,所有数据都是虚构的。要构建真实的平台需要大量的后端开发工作和区块链知识。
+**提示**: 这个版本100%模仿了 clawn.ch 的外观和布局。所有交互都是前端模拟，不包含真实的区块链功能。
